@@ -9,15 +9,20 @@
 #EXAMPLE--GIVEN 31 cents-----you give back 3 coins in (1 quarter, 1 nickel and i pennies)
 
 def num_coins(cents):
+   if cents < 1:
+        return 0
    coins =[25,10,5,1]
    num_coins = 0
+   
    coins.sort(reverse=True)
    new_cents = cents
    for coin in coins:
        while  new_cents >= coin :
            new_cents = new_cents - coin
            num_coins +=1
-   print(str(num_coins))
+   return num_coins
 
           
-num_coins(31)
+print(num_coins(31))
+
+
