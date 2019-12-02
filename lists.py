@@ -20,6 +20,18 @@ print(a[4:])
 # remove --- removes an item in the middle
 # reverse -- flips the order of the list
 #sort --sorts the order of the list.
+def shortestWay(self, s: str, t: str) -> int:
+        n,m = len(s),len(t)
+        res =i= 0
+        while i < m:
+            ti = i
+            for c in s:
+                if i < m and c == t[i]:
+                    i += 1
+            if ti == i:
+                return -1
+            res += 1
+        return res
 
 
 
